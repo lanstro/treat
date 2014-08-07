@@ -377,9 +377,9 @@ module Treat::Entities::Entity::Buildable
     dot = string.count('.!?')
     if dot && dot >= 1 && string.count("\n") > 0
       Treat::Entities::Section.new(string)
-    elsif string.count('.') == 0 &&
-      string.size < 45
-      Treat::Entities::Title.new(string)
+    #elsif string.count('.') == 0 &&
+    #  string.size < 45
+    #  Treat::Entities::Title.new(string)
     else
       Treat::Entities::Paragraph.new(string)
     end
